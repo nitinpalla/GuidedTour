@@ -1,0 +1,21 @@
+{
+  "name": "guidedtour",
+  "version": "1.0.0",
+  "description": "self guided tour single page application",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nitinpalla/GuidedTour.git"
+  },
+  "author": "Nitin Palla",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nitinpalla/GuidedTour/issues"
+  },
+  "homepage": "https://github.com/nitinpalla/GuidedTour#readme"
+}
