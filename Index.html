@@ -11,7 +11,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous"><!-- Bootstrap CSS -->
-  </head>
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
+	</head>
   
  
   <body>
@@ -39,27 +40,20 @@
 	</div>
 		<script language="JavaScript" type="text/javascript">
 			$(document).ready(function(){
-			$(".image_rollover").hover(function(){
-					$(this).find("img").toggle();
+			$('.image_rollover img').hide();
+				var index = 0;
+				var $imageRollover = $('.image_rollover');
+				var maxIndex = $imageRollover.find('img').length;
+			$imageRollover.on('mouseenter', function(){
+					$('.image_rollover img').hide();        
+					console.log(index);
+					$imageRollover.find('img').eq(index).show();
+					index++;
+						if (index >= maxIndex) {
+								index = 0;
+						}
 				});
 			});
-			// 	(document).ready(function () {
-			// 		$("#image_two, #image_three, #image_four, #image_five, #image_six").hide();
-			
-			// 		$(".image_rollover").hover(function () {
-			// 			animation()
-			// 		});
-			// 	});
-			
-			// function animation() {
-			// 		var $curr=$(".image_rollover img:visible");
-			// 		var $next=$curr.next();    
-			
-			// 		if($next.size()==0) $next=$(".image_rollover img:first");
-			
-			// 		$next.show();
-			// 		$curr.hide();
-			// }
 		</script>
 	
 	
