@@ -1,0 +1,8 @@
+.image_rollover{
+    border:1px solid #000000;
+    width:100%;
+    overflow:hidden;
+}
+.image_rollover img{
+    display: none;
+ }

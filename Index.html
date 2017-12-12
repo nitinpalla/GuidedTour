@@ -3,51 +3,74 @@
   <head>
  
 	<title>Guided Tour</title>
+
+		<link rel ="text/jQuery" href="main/main.js" >
+		<link href="main/style.css" rel="stylesheet"><!--custom Style sheet -->
+		<link href="node_modules/intro.js/introjs.css" rel="stylesheet"><!-- Add IntroJs styles -->
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous"><!-- Bootstrap CSS -->
   </head>
   
  
   <body>
-	<div class="jumbotron">
+	<div class="jumbotron" style="text-align: -webkit-center">
 		<h1>Self Guided Tour!</h1>
 		
-			<div class="container-fluid align-self-center">
+			<div id = "imgs" class="container wrapper image_rollover">
 				<h2>Container Flex</h2>
-				​<table>
+				​<ul>
 					
-					<img src="img/step-1.png" class="img-fluid" alt="Step-1">
+					<img id="image_one" src="img/step-1.png" class="img-fluid" alt="Step-1">
+				  
+					<img id="image_two" src="img/step-2.png" class="img-fluid" alt="Step-2">
+					
+					<img id="image_three" src="img/step-3.png" class="img-fluid" alt="Step-3">
 				
-					<img src="img/step-2.png" class="img-fluid" alt="Step-2">
+					<img id="image_four" src="img/step-4.png" class="img-fluid" alt="Step-4">
 					
-					<img src="img/step-3.png" class="img-fluid" alt="Step-3">
-				
-					<img src="img/step-4.png" class="img-fluid" alt="Step-4">
+					<img id="image_five" src="img/step-5.png" class="img-fluid" alt="Step-5">
 					
-					<img src="img/step-5.png" class="img-fluid" alt="Step-5">
-					
-					<img src="img/step-6.png" class="img-fluid" alt="Step-6">
-				</table>
+					<img id="image_six" src="img/step-6.png" class="img-fluid" alt="Step-6">
+				</ul>
 			</div>
 
 	</div>
-
+		<script language="JavaScript" type="text/javascript">
+			$(document).ready(function(){
+			$(".image_rollover").hover(function(){
+					$(this).find("img").toggle();
+				});
+			});
+			// 	(document).ready(function () {
+			// 		$("#image_two, #image_three, #image_four, #image_five, #image_six").hide();
+			
+			// 		$(".image_rollover").hover(function () {
+			// 			animation()
+			// 		});
+			// 	});
+			
+			// function animation() {
+			// 		var $curr=$(".image_rollover img:visible");
+			// 		var $next=$curr.next();    
+			
+			// 		if($next.size()==0) $next=$(".image_rollover img:first");
+			
+			// 		$next.show();
+			// 		$curr.hide();
+			// }
+		</script>
 	
 	
+		<!--Introjs Javascript -->
+		<script type="text/javascript" src="node_modules/intro.js/intro.js"></script>
 	
-	
-	
-	<!-- Optional JavaScript -->
+		<!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 	
-	
-	
-	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+		<script language="JavaScript" type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script language="JavaScript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script language="JavaScript" type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
   </body>
 </html>
